@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root background for light mode (white) */
+:root {
+  background-color: #ffffff;
+  color: #1a1a1a; /* optional: dark text for white bg */
+}
+
+/* Dark mode background (black) */
+.dark {
+  background-color: #000000;
+  color: #f0f0f0; /* optional: light text for black bg */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply font-roboto;
+}
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
