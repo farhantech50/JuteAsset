@@ -8,8 +8,11 @@ import {
 } from "react-icons/fa";
 export default function Why() {
   return (
-    <div className="w-full bg-custom-accent dark:bg-custom-background-dark shadow-md h-[300px]">
-      <div className="grid grid-cols-2 p-3 mb-5 gap-3 sm:grid-cols-6 h-full items-center text-white dark:text-custom-text-dark">
+    <div className="w-full bg-custom-accent dark:bg-custom-background-dark shadow-md min-h-[300px] flex flex-col items-center justify-center py-8">
+      <p className="text-3xl font-semibold text-center text-white dark:text-custom-text-dark mb-6">
+        Why Us?
+      </p>
+      <div className="grid grid-cols-2 p-3 mb-5 gap-3 w-full sm:grid-cols-6 h-auto items-center text-white dark:text-custom-text-dark">
         <div className="h-full flex flex-col items-center justify-center">
           <FaShieldAlt className="text-4xl sm:text-5xl mb-2" />
           <p className="text-sm sm:text-base font-semibold text-center">

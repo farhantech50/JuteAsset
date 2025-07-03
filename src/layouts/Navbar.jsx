@@ -17,7 +17,9 @@ export default function Navbar() {
       <div
         className={`absolute left-1/2 -translate-x-1/2 top-20 h-10 sm:h-20 flex items-center justify-center sm:top-0
                px-4 sm:px-6 ${
-                 carouselInView ? "bg-white" : "bg-black"
+                 carouselInView
+                   ? "bg-white"
+                   : "bg-black dark:bg-white dark:bg-opacity-10 "
                } bg-opacity-10 backdrop-blur-md rounded-full z-50 transition-all ease-in-out duration-300`}
       >
         {/* Center: Navigation */}
@@ -30,7 +32,7 @@ export default function Navbar() {
                   ? "text-custom-accent font-bold "
                   : carouselInView
                   ? "text-custom-text-dark"
-                  : "text-custom-text"
+                  : "text-custom-text dark:text-custom-text-dark"
               } hover:text-custom-accent-hover text-sm sm:text-base transition-all ease-in-out duration-300`}
             >
               Home
@@ -44,7 +46,7 @@ export default function Navbar() {
                   ? "text-custom-accent font-bold "
                   : carouselInView
                   ? "text-custom-text-dark"
-                  : "text-custom-text"
+                  : "text-custom-text dark:text-custom-text-dark"
               } hover:text-custom-accent-hover text-sm sm:text-base transition-all ease-in-out duration-300`}
             >
               Products
@@ -58,7 +60,7 @@ export default function Navbar() {
                   ? "text-custom-accent font-bold "
                   : carouselInView
                   ? "text-custom-text-dark"
-                  : "text-custom-text"
+                  : "text-custom-text dark:text-custom-text-dark"
               } hover:text-custom-accent-hover  text-sm sm:text-base transition-all ease-in-out duration-300`}
             >
               Why
@@ -72,7 +74,7 @@ export default function Navbar() {
                   ? "text-custom-accent font-bold "
                   : carouselInView
                   ? "text-custom-text-dark"
-                  : "text-custom-text"
+                  : "text-custom-text dark:text-custom-text-dark"
               } hover:text-custom-accent-hover text-sm sm:text-base transition-all ease-in-out duration-300`}
             >
               About
@@ -86,7 +88,7 @@ export default function Navbar() {
                   ? "text-custom-accent font-bold "
                   : carouselInView
                   ? "text-custom-text-dark"
-                  : "text-custom-text"
+                  : "text-custom-text dark:text-custom-text-dark"
               } hover:text-custom-accent-hover text-sm sm:text-base transition-all ease-in-out duration-300`}
             >
               Contact
