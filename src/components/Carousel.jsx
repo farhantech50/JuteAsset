@@ -31,7 +31,7 @@ export default function CarouselWithContent() {
           return (
             <div className="relative h-full w-full">
               <img
-                src={`/carousel${index + 1}.jpg`}
+                src={`/carousel/carousel${index + 1}.jpg`}
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">

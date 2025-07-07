@@ -6,24 +6,55 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import ProductModal from "@/components/ProductModal";
+import { useEffect, useState } from "react";
 
-export default function CardDefault() {
+export default function BlogCard({ product, setIsModalOpen }) {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    setIsModalOpen(open);
+  }, [open]);
+
+  const handleOpen = () => setOpen(!open);
   return (
-    <Card className="mt-6 w-96">
-      <CardHeader color="blue-gray" className="relative h-56">
-        <img
-          src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-          alt="card-image"
-        />
-      </CardHeader>
-      <CardBody>
-        <Typography variant="h5" color="blue-gray" className="mb-2">
-          UI/UX Review Check
-        </Typography>
-      </CardBody>
-      <CardFooter className="pt-0">
-        <Button>Read More</Button>
-      </CardFooter>
-    </Card>
+    <>
+      <Card className="max-w-[24rem] overflow-hidden dark:bg-custom-background-dark">
+        <CardHeader
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className="m-0 rounded-none"
+        >
+          <img src={`${product.images[0]}`} className="object-cover" />
+        </CardHeader>
+        <CardBody>
+          <Typography
+            variant="h4"
+            color="blue-gray"
+            className="dark:text-custom-background"
+          >
+            {product.name}
+          </Typography>
+          <Typography
+            variant="lead"
+            color="gray"
+            className="mt-3 font-normal text-gray-600 !line-clamp-2"
+          >
+            {product.description}
+          </Typography>
+        </CardBody>
+        <CardFooter className="flex items-center justify-between">
+          <div className="flex items-center -space-x-3">
+            <Button
+              className="bg-custom-accent hover:bg-custom-accent-hover transition-all duration-300 w-auto"
+              onClick={handleOpen}
+            >
+              See More
+            </Button>
+          </div>
+        </CardFooter>
+      </Card>
+      <ProductModal {...{ open, handleOpen, product }} />
+    </>
   );
 }
