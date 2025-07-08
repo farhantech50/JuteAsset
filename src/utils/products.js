@@ -69,11 +69,4 @@ export const products = [
       "Product 10 delivers cutting-edge innovation in a sleek, ergonomic form. With attention to detail and enhanced durability, it's built to handle challenges with ease. A perfect blend of performance and sophistication for modern users.",
     images: ["/products/10.webp", "/products/10-1.webp", "/products/10-2.webp"],
   },
-  {
-    id: 11,
-    name: "Product 11",
-    description:
-      "Combining timeless design with contemporary features, Product 11 stands out in form and function. It's built to last, easy to use, and perfect for those who appreciate a premium, no-compromise experience.",
-    images: ["/products/11.webp", "/products/11-1.webp", "/products/11-2.webp"],
-  },
 ];

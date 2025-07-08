@@ -8,7 +8,7 @@ import { useCarousel } from "@/contexts/CarouselInViewContext";
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { carouselInView, setCarouselInView } = useCarousel();
+  const { carouselInView } = useCarousel();
 
   const { darkMode, toggleTheme } = useContext(ThemeContext);
 
@@ -40,20 +40,6 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href="#products"
-              className={`${
-                location.hash === "#products"
-                  ? "text-custom-accent font-bold "
-                  : carouselInView
-                  ? "text-custom-text-dark"
-                  : "text-custom-text dark:text-custom-text-dark"
-              } hover:text-custom-accent-hover text-sm sm:text-base transition-all ease-in-out duration-300`}
-            >
-              Products
-            </a>
-          </li>
-          <li>
-            <a
               href="#why"
               className={`${
                 location.hash === "#why"
@@ -64,6 +50,20 @@ export default function Navbar() {
               } hover:text-custom-accent-hover  text-sm sm:text-base transition-all ease-in-out duration-300`}
             >
               Why
+            </a>
+          </li>
+          <li>
+            <a
+              href="#products"
+              className={`${
+                location.hash === "#products"
+                  ? "text-custom-accent font-bold "
+                  : carouselInView
+                  ? "text-custom-text-dark"
+                  : "text-custom-text dark:text-custom-text-dark"
+              } hover:text-custom-accent-hover text-sm sm:text-base transition-all ease-in-out duration-300`}
+            >
+              Products
             </a>
           </li>
           <li>

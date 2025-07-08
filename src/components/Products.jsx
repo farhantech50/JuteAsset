@@ -1,13 +1,25 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import { Carousel } from "@material-tailwind/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { products } from "../utils/products";
+import ProductModal from "@/components/ProductModal";
 
 export default function Products() {
   const [count, setCount] = useState(0);
   const [batch, setBatch] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleOpenModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   useEffect(() => {
     if (count > 0) {
       setBatch(Math.ceil(products.length / count));
@@ -43,7 +55,7 @@ export default function Products() {
             <button
               onClick={handlePrev}
               disabled={!loop && firstIndex}
-              className="absolute top-1/3 -left-4 -translate-y-1/2 text-black p-2 "
+              className="absolute top-1/3 -left-4 -translate-y-1/2 text-black p-2 rounded-full select-none transition-all w-12 max-w-[48px] h-12 max-h-[48px]  bg-transparent  active:bg-custom-accent/50 grid place-items-center"
             >
               <ChevronLeftIcon className="h-6 w-6" />
             </button>
@@ -52,7 +64,7 @@ export default function Products() {
             <button
               onClick={handleNext}
               disabled={!loop && lastIndex}
-              className="absolute top-1/3 -right-4 -translate-y-1/2 text-black p-2 "
+              className="absolute top-1/3 -right-4 -translate-y-1/2 text-black p-2 rounded-full select-none transition-all w-12 max-w-[48px] h-12 max-h-[48px]  bg-transparent  active:bg-custom-accent/50 grid place-items-center"
             >
               <ChevronRightIcon className="h-6 w-6" />
             </button>
@@ -77,13 +89,16 @@ export default function Products() {
                     <ProductCard
                       key={index + i * count}
                       product={product}
-                      setIsModalOpen={setIsModalOpen}
+                      onOpenModal={() => handleOpenModal(product)}
                     />
                   );
                 })}
             </div>
           ))}
         </Carousel>
+        {isModalOpen && selectedProduct && (
+          <ProductModal product={selectedProduct} onClose={handleCloseModal} />
+        )}
       </div>
     </div>
   );

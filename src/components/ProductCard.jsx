@@ -6,16 +6,8 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import ProductModal from "@/components/ProductModal";
-import { useEffect, useState } from "react";
 
-export default function BlogCard({ product, setIsModalOpen }) {
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    setIsModalOpen(open);
-  }, [open]);
-
-  const handleOpen = () => setOpen(!open);
+export default function BlogCard({ product, onOpenModal }) {
   return (
     <>
       <Card className="max-w-[24rem] overflow-hidden dark:bg-custom-background-dark">
@@ -47,14 +39,13 @@ export default function BlogCard({ product, setIsModalOpen }) {
           <div className="flex items-center -space-x-3">
             <Button
               className="bg-custom-accent hover:bg-custom-accent-hover transition-all duration-300 w-auto"
-              onClick={handleOpen}
+              onClick={onOpenModal}
             >
               See More
             </Button>
           </div>
         </CardFooter>
       </Card>
-      <ProductModal {...{ open, handleOpen, product }} />
     </>
   );
 }
