@@ -5,7 +5,7 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function Contact() {
   return (
     <div
-      className="w-full bg-custom-accent dark:bg-custom-background-dark"
+      className="w-full bg-custom-accent dark:bg-gray-900"
       style={{ height: "calc(100vh / 2)" }}
     >
       <div className="w-full h-full flex flex-col items-center justify-center">
@@ -40,8 +40,8 @@ export default function Contact() {
               {/* Text Content */}
               <div className="text-xs sm:text-sm text-white mt-2 leading-tight">
                 <div className="font-bold">Email Us</div>
-                <div>asset700@gmail.com</div>
                 <div>juteasset@gmail.com</div>
+                <div>asset700@gmail.com</div>
               </div>
             </div>
 

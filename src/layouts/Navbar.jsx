@@ -49,7 +49,7 @@ export default function Navbar() {
                   : "text-custom-text dark:text-custom-text-dark"
               } hover:text-custom-accent-hover  text-sm sm:text-base transition-all ease-in-out duration-300`}
             >
-              Why
+              WhyUs
             </a>
           </li>
           <li>
