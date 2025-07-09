@@ -9,11 +9,11 @@ import { GrCertificate } from "react-icons/gr";
 export default function Why() {
   return (
     <div className="w-full p-2 sm:pt-14 sm:pr-14 sm:pl-14 sm:pb-0 min-h-[300px] bg-custom-accent dark:bg-custom-background-dark flex items-center">
-      <div className="w-full h-full p-10 flex-grow rounded-lg bg-[#f2f2f2] dark:bg-gray-900">
+      <div className="w-full h-full p-10 flex-grow rounded-lg md:rounded-full  bg-[#f2f2f2] dark:bg-gray-900">
         <p className="text-3xl font-semibold text-center text-custom-text dark:text-custom-text-dark mb-6">
           Why Us?
         </p>
-        <div className="grid grid-cols-2 p-3 mb-5 gap-3 w-full sm:grid-cols-6 h-auto items-center text-custom-accent dark:text-custom-text-dark">
+        <div className="grid grid-cols-2 p-3 mb-5 gap-3 w-full md:grid-cols-6 h-auto items-center text-custom-accent dark:text-custom-text-dark">
           <div className="h-full flex flex-col items-center justify-center">
             <FaShieldAlt className="text-4xl sm:text-5xl mb-2" />
             <p className="text-sm sm:text-base font-semibold text-center text-black dark:text-custom-text-dark">

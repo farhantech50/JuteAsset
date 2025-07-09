@@ -1,14 +1,12 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
-import carouselText1 from "@/assets/carouseltxt1.txt?raw";
-import carouselText2 from "@/assets/carouseltxt2.txt?raw";
-import carouselText3 from "@/assets/carouseltxt3.txt?raw";
+import carouselText from "@/assets/carouseltxt.txt?raw";
 
 export default function CarouselWithContent() {
   const [texts, setTexts] = useState([]);
-
+  console.log(carouselText);
   useEffect(() => {
-    setTexts([carouselText1, carouselText2, carouselText3]);
+    setTexts(carouselText?.split("|"));
   }, []);
 
   const handleExploreClick = () => {
@@ -23,7 +21,6 @@ export default function CarouselWithContent() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  let title, details;
   return (
     <div className="relative w-full h-screen">
       <Carousel autoplay={true} autoplayDelay={4000} loop={true}>
@@ -37,18 +34,11 @@ export default function CarouselWithContent() {
               <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
                 <div className="w-3/4 text-center md:w-2/4">
                   <Typography
-                    variant="h1"
-                    color="white"
-                    className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-                  >
-                    {(title = data.split("|")[0])}
-                  </Typography>
-                  <Typography
                     variant="lead"
                     color="white"
-                    className="mb-12 opacity-80"
+                    className="mb-12 opacity-80 text-xl sm:text-2xl"
                   >
-                    {(details = data.split("|")[1])}
+                    {data}
                   </Typography>
                   <div className="flex justify-center gap-2">
                     <Button
