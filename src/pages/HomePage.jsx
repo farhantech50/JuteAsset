@@ -1,11 +1,12 @@
 import { lazy, Suspense } from "react";
+
 // Lazy imports:
-const Carousel = lazy(() => import("../components/Carousel"));
+import Carousel from "../components/Carousel";
 const Why = lazy(() => import("../components/Why"));
 const Products = lazy(() => import("../components/Products"));
 const About = lazy(() => import("../components/About"));
 const Contact = lazy(() => import("../components/Contact"));
-import { Spinner } from "@material-tailwind/react";
+
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useCarousel } from "@/contexts/CarouselInViewContext";
@@ -65,17 +66,11 @@ export default function HomePage() {
     }
   }, [location]);
   return (
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center h-screen">
-          <Spinner className="size-11 text-custom-accent" />
-        </div>
-      }
-    >
-      <div className="flex flex-col w-full ">
-        <div id="home" ref={carouselRef}>
-          <Carousel />
-        </div>
+    <div className="flex flex-col w-full ">
+      <div id="home" ref={carouselRef}>
+        <Carousel />
+      </div>
+      <Suspense fallback={null}>
         <div className="scroll-mt-72" id="why">
           <Why />
         </div>
@@ -88,7 +83,7 @@ export default function HomePage() {
         <div id="contact">
           <Contact />
         </div>
-      </div>
-    </Suspense>
+      </Suspense>
+    </div>
   );
 }
