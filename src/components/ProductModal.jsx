@@ -18,13 +18,13 @@ export default function DialogCustomAnimation({ product, onClose }) {
         mount: { scale: 1, y: 0 },
         unmount: { scale: 0.9, y: -100 },
       }}
-      className="dark:bg-custom-background-dark"
+      className="dark:bg-custom-background-dark max-h-[100vh] md:max-h-[80vh] 2xl:max-h-[100vh] overflow-y-auto scrollbar rounded-xl"
     >
       <DialogHeader className="flex flex-col gap-3 dark:text-custom-text-dark">
         <div className="grid gap-4">
           <div>
             <img
-              className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+              className="h-auto w-full max-w-full rounded-lg object-cover object-center"
               src={active}
               alt=""
             />
