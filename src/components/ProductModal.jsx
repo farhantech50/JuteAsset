@@ -27,6 +27,7 @@ export default function DialogCustomAnimation({ product, onClose }) {
               className="h-auto w-full max-w-full rounded-lg object-cover object-center"
               src={active}
               alt=""
+              loading="lazy"
             />
           </div>
           <div className="grid grid-cols-5 gap-4">
@@ -37,6 +38,7 @@ export default function DialogCustomAnimation({ product, onClose }) {
                   src={imgelink}
                   className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
                   alt="gallery-image"
+                  loading="lazy"
                 />
               </div>
             ))}

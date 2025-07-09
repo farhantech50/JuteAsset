@@ -17,7 +17,11 @@ export default function BlogCard({ product, onOpenModal }) {
           color="transparent"
           className="m-0 rounded-none"
         >
-          <img src={`${product.images[0]}`} className="object-cover" />
+          <img
+            src={`${product.images[0]}`}
+            className="object-cover"
+            loading="lazy"
+          />
         </CardHeader>
         <CardBody>
           <Typography
