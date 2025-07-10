@@ -8,8 +8,8 @@ import {
 import { GrCertificate } from "react-icons/gr";
 export default function Why() {
   return (
-    <div className="w-full p-2 sm:pt-14 sm:pr-14 sm:pl-14 sm:pb-0 min-h-[300px] bg-custom-accent dark:bg-custom-background-dark flex items-center">
-      <div className="w-full h-full p-10 flex-grow rounded-lg md:rounded-full  bg-[#f2f2f2] dark:bg-gray-900">
+    <div className="w-full p-2 lg:pt-14 lg:pr-14 lg:pl-14 lg:pb-0 min-h-[300px] bg-custom-accent dark:bg-custom-background-dark flex items-center">
+      <div className="w-full h-full p-10 flex-grow rounded-lg md:rounded-full  bg-[#f2f2f2]/85 dark:bg-gray-900 ">
         <p className="text-3xl font-semibold text-center text-custom-text dark:text-custom-text-dark mb-6">
           Why Us?
         </p>
@@ -53,7 +53,7 @@ export default function Why() {
             </p>
           </div>
         </div>
-        <p className="text-sm sm:text-base font-semibold text-center  text-gray-600">
+        <p className="text-sm sm:text-base font-semibold text-justify sm:text-center  text-gray-800  dark:text-custom-text-dark ">
           Selecting our company ensures a commitment to excellence across key
           facets. Our rigorous Quality Assurance guarantees consistently high
           standards, complemented by Competitive Pricing for value without

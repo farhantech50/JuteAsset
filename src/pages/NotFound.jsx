@@ -18,12 +18,6 @@ export default function NotFound() {
           >
             Go back home
           </a>
-          <a
-            href="/support"
-            className="text-sm font-semibold text-custom-text dark:text-custom-text-dark hover:underline"
-          >
-            Contact support <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </div>
     </div>

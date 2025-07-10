@@ -12,23 +12,6 @@ export const router = createBrowserRouter([
         index: true, // this means path: "/"
         element: <HomePage />,
       },
-      {
-        path: "products", // this means path: "/products"
-        element: <HomePage />,
-      },
-      {
-        path: "why", // this means path: "/why"
-        element: <HomePage />,
-      },
-
-      {
-        path: "contact", // this means path: "/contact"
-        element: <HomePage />,
-      },
-      {
-        path: "about", // this means path: "/about"
-        element: <HomePage />,
-      },
     ],
   },
   {

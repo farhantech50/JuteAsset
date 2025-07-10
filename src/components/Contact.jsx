@@ -19,7 +19,7 @@ export default function Contact() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-white w-full h-full">
             {/* Phone */}
             <div className="flex items-center justify-end sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-white/80 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
+              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
                 <FiPhone />
               </div>
 
@@ -33,7 +33,7 @@ export default function Contact() {
 
             {/* Email */}
             <div className="flex items-center justify-end sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-white/80 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
+              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
                 <MdEmail />
               </div>
 
@@ -46,7 +46,7 @@ export default function Contact() {
             </div>
             {/* Location */}
             <div className="flex items-center justify-start sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-white/80 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
+              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
                 <IoLocationSharp />
               </div>
 
@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
             {/* Time */}
             <div className="flex items-center justify-start sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-white/80 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
+              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
                 <MdAccessTime />
               </div>
 

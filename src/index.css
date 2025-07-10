@@ -30,7 +30,7 @@ body {
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
-    width: 18px;
+    width: 12px;
   }
 
   .scrollbar::-webkit-scrollbar-track {
@@ -41,7 +41,7 @@ body {
   .scrollbar::-webkit-scrollbar-thumb {
     background: #8db600;
     border-radius: 100vh;
-    border: 3px solid #dcf58d;
+    border: 2px solid #dcf58d;
   }
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
