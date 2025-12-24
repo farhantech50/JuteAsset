@@ -4,27 +4,23 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export default function Contact() {
   return (
-    <div
-      className="w-full bg-custom-accent dark:bg-custom-background-dark"
-      style={{ height: "calc(100vh / 2)" }}
-    >
-      <div className="w-full h-full flex flex-col items-center justify-center">
-        {/* Heading */}
-        <p className="text-xl sm:text-2xl xl:text-4xl font-bold text-white my-3">
-          Get in touch with us now!
-        </p>
-
+    <div className="w-full py-4 bg-custom-accent dark:bg-custom-background-dark">
+      <div className="w-full h-full flex items-center justify-center">
         {/* Pill-shaped div */}
-        <div className="w-[95%] h-[80%] sm:h-[90%] rounded-full bg-white/10 my-3 p-6">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-white w-full h-full">
-            {/* Phone */}
-            <div className="flex items-center justify-end sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
-                <FiPhone />
-              </div>
+        <div className="w-[95%] h-[80%] sm:h-[90%] rounded-lg sm:rounded-full bg-[#f2f2f2]/85 dark:bg-gray-900  flex flex-col py-6">
+          {/* Heading INSIDE pill */}
+          <p className="text-3xl font-semibold text-center text-custom-text dark:text-custom-background mb-6 pt-2">
+            Contact us
+          </p>
 
-              {/* Text Content */}
-              <div className="text-xs sm:text-sm text-white mt-2 leading-tight">
+          {/* Content */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full h-full">
+            {/* Phone */}
+            <div className="flex items-center justify-end sm:justify-center text-center flex-col">
+              <div className="w-20 h-8 sm:w-28 sm:h-20 2xl:w-36 2xl:h-28 bg-custom-accent dark:bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl">
+                <FiPhone className="text-[#f2f2f2]/85 dark:text-custom-accent" />
+              </div>
+              <div className="text-xs sm:text-sm text-black dark:text-white mt-2">
                 <div className="font-bold">Call Us</div>
                 <div>+8801761158100</div>
                 <div>+8801765297395</div>
@@ -32,41 +28,37 @@ export default function Contact() {
             </div>
 
             {/* Email */}
-            <div className="flex items-center justify-end sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
-                <MdEmail />
+            <div className="flex items-center justify-end sm:justify-center text-center flex-col">
+              <div className="w-20 h-8 sm:w-28 sm:h-20 2xl:w-36 2xl:h-28 bg-custom-accent dark:bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl">
+                <MdEmail className="text-[#f2f2f2]/85 dark:text-custom-accent" />
               </div>
-
-              {/* Text Content */}
-              <div className="text-xs sm:text-sm text-white mt-2 leading-tight">
+              <div className="text-xs sm:text-sm text-black dark:text-white mt-2">
                 <div className="font-bold">Email Us</div>
                 <div>juteasset@gmail.com</div>
                 <div>asset700@gmail.com</div>
               </div>
             </div>
-            {/* Location */}
-            <div className="flex items-center justify-start sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
-                <IoLocationSharp />
-              </div>
 
-              {/* Text Content */}
-              <div className="text-xs sm:text-sm text-white mt-2 leading-tight">
+            {/* Location */}
+            <div className="flex items-center justify-start sm:justify-center text-center flex-col">
+              <div className="w-20 h-8 sm:w-28 sm:h-20 2xl:w-36 2xl:h-28 bg-custom-accent dark:bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl">
+                <IoLocationSharp className="text-[#f2f2f2]/85 dark:text-custom-accent" />
+              </div>
+              <div className="text-xs sm:text-sm text-black dark:text-white mt-2">
                 <div className="font-bold">Find Us</div>
                 <div>271/6 Niribili Housing, West Dhanmondi,</div>
                 <div>Dhaka, Bangladesh</div>
               </div>
             </div>
-            {/* Time */}
-            <div className="flex items-center justify-start sm:justify-center w-full h-full text-center flex-col">
-              <div className="w-20 h-8 sm:w-28 sm:h-20  2xl:w-36 2xl:h-28 bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl text-custom-accent">
-                <MdAccessTime />
-              </div>
 
-              {/* Text Content */}
-              <div className="text-xs sm:text-sm text-white mt-2 leading-tight">
+            {/* Time */}
+            <div className="flex items-center justify-start sm:justify-center text-center flex-col">
+              <div className="w-20 h-8 sm:w-28 sm:h-20 2xl:w-36 2xl:h-28 bg-custom-accent dark:bg-[#f2f2f2]/85 rounded-full flex items-center justify-center text-xl sm:text-4xl">
+                <MdAccessTime className="text-[#f2f2f2]/85 dark:text-custom-accent" />
+              </div>
+              <div className="text-xs sm:text-sm text-black dark:text-white mt-2">
                 <div className="font-bold">Working Hours</div>
-                <div>Monday-Friday</div>
+                <div>Monday–Friday</div>
                 <div>9 AM to 8 PM</div>
               </div>
             </div>

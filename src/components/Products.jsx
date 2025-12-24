@@ -39,8 +39,8 @@ export default function Products() {
   }, []);
 
   return (
-    <div className="w-full p-2 lg:p-14 min-h-screen bg-custom-accent dark:bg-custom-background-dark flex">
-      <div className="w-full p-4 flex-grow rounded-lg bg-[#f2f2f2]/85 dark:bg-gray-900">
+    <div className="w-full  py-4 px-2 bg-custom-accent dark:bg-custom-background-dark flex">
+      <div className="w-full p-2 flex-grow rounded-lg bg-[#f2f2f2]/85 dark:bg-gray-900">
         <p className="text-3xl font-semibold text-center text-custom-text dark:text-custom-background mb-6 py-10">
           Our Products
         </p>

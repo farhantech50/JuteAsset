@@ -14,13 +14,9 @@ export default function DialogCustomAnimation({ product, onClose }) {
     <Dialog
       open={open}
       handler={onClose}
-      animate={{
-        mount: { scale: 1, y: 0 },
-        unmount: { scale: 0.9, y: -100 },
-      }}
-      className="dark:bg-custom-background-dark max-h-[80vh]  overflow-y-auto scrollbar rounded-xl"
+      className="dark:bg-custom-background-dark rounded-xl"
     >
-      <DialogHeader className="flex flex-col gap-3 dark:text-custom-text-dark">
+      <DialogBody className="max-h-[80vh] overflow-y-auto scrollbar">
         <div className="grid gap-4">
           <div>
             <img
@@ -44,14 +40,15 @@ export default function DialogCustomAnimation({ product, onClose }) {
             ))}
           </div>
         </div>
-        {product.name}
-      </DialogHeader>
-      <DialogBody>
+        <p className="block mt-4 w-full text-center text-xl font-semibold text-custom-text">
+          {product.name}
+        </p>
+
         {product.description.split("|").map((chunk, chunkIndex) => (
           <div key={chunkIndex}>
             {chunk.split("\n").map((line, i) => {
               if (!line.trim() || !line.includes(":"))
-                return <hr className="h-3" />; // skip empty or invalid lines
+                return <hr className="h-3" />;
               const [label, ...rest] = line.split(":");
               const value = rest.join(":").trim();
               return (
@@ -63,11 +60,6 @@ export default function DialogCustomAnimation({ product, onClose }) {
           </div>
         ))}
       </DialogBody>
-      <DialogFooter>
-        <Button variant="text" color="red" onClick={onClose} className="mr-1">
-          <span>Close</span>
-        </Button>
-      </DialogFooter>
     </Dialog>
   );
 }

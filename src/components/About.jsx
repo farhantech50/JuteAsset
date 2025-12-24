@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="w-full p-2 lg:p-14 min-h-screen h-full  bg-custom-accent dark:bg-custom-background-dark flex items-center">
+    <div className="w-full  py-4 px-2 bg-custom-accent dark:bg-custom-background-dark flex items-center">
       <div className="w-full h-full  p-6 lg:p-10  flex-grow rounded-lg bg-[#f2f2f2]/85 dark:bg-gray-900">
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-8">
           {/* Left Column: Text Content */}
